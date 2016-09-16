@@ -4,7 +4,7 @@ var sinon = require('sinon');
 var PassThrough = require('stream').PassThrough;
 var StashClient = require('../../index.js').Client;
 
-describe('Repos', function() {
+describe('Repos (get)', function() {
     var httpClientGet, httpClient, stashClient;
 
     beforeEach(function() {
