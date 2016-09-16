@@ -25,7 +25,7 @@ describe('Repos (post)', function() {
         httpClientPost.withArgs('http://localhost/projects/PRJ/repos', { data: { name: 'my-repo', public: true }, headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' } }).callsArgWith(2, expected, response)
             .returns(request);
 
-        // Test repos.createRepo API.
+        // Test repos.create API.
         stashClient.repos.create('PRJ', 'my-repo', { public: true }).then(function(repo) {
             assert.equal(repo.slug, 'my-repo');
             assert.equal(repo.name, 'My repo');
