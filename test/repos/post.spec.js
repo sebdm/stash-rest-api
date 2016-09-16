@@ -22,7 +22,7 @@ describe('Repos (post)', function() {
         var expected = require('../mocks/repo-single.json');
         var response = new PassThrough();
         var request = new PassThrough();
-        httpClientPost.withArgs('http://localhost/projects/PRJ/repos', { data: { name: 'my-repo', public: true }, headers: { 'Content-Type': 'application/json' } }).callsArgWith(2, expected, response)
+        httpClientPost.withArgs('http://localhost/projects/PRJ/repos', { data: { name: 'my-repo', public: true }, headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' } }).callsArgWith(2, expected, response)
             .returns(request);
 
         // Test repos.createRepo API.
